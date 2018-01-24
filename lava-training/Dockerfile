@@ -7,6 +7,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get -y install python-jinja2 python
 
 RUN DEBIAN_FRONTEND=noninteractive apt-get -y install git
 
-RUN git clone https://git.automotivelinux.org/AGL/releng-scripts
+RUN git clone https://git.automotivelinux.org/AGL/releng-scripts -b release
+RUN cd releng-scripts && git status
 
 ENTRYPOINT /bin/sleep 365d
