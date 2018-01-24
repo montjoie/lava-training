@@ -12,4 +12,4 @@ docker build lava-training -t lava-training
 docker run --detach lava-training
 
 # play with it
-docker exec -ti $(docker ps |grep lava-training | cut -d\  -f1) bash
+docker exec -ti $(docker ps |grep lava-training | cut -d' ' -f1) bash
