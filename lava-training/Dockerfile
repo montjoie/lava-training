@@ -12,6 +12,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get -y install iputils-ping vim nano emac
 
 RUN DEBIAN_FRONTEND=noninteractive apt-get -y install git
 RUN git clone https://git.automotivelinux.org/AGL/releng-scripts -b release
-RUN cd releng-scripts && git status
+
+COPY lab-baylibre-lavabox.cfg releng-scripts/templates/callback/
 
 ENTRYPOINT /bin/sleep 365d
