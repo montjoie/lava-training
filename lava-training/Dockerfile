@@ -17,4 +17,7 @@ COPY lab-baylibre-lavabox.cfg releng-scripts/templates/callback/
 
 RUN sed -i 's,raspberrypi3,raspberrypi3-uboot,' releng-scripts/templates/machines/raspberrypi3.jinja2
 
-ENTRYPOINT /bin/sleep 365d
+COPY entrypoint.sh /
+RUN chmod 750 /entrypoint.sh
+
+ENTRYPOINT /entrypoint.sh
