@@ -15,8 +15,6 @@ RUN git clone https://git.automotivelinux.org/AGL/releng-scripts -b release
 
 COPY lab-baylibre-lavabox.cfg releng-scripts/templates/callback/
 
-RUN sed -i 's,raspberrypi3,raspberrypi3-uboot,' releng-scripts/templates/machines/raspberrypi3.jinja2
-
 COPY lava-training-tests.sh /
 RUN chmod 750 /lava-training-tests.sh
 
